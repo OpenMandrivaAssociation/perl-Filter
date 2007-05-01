@@ -1,6 +1,6 @@
 %define module  Filter
-%define version 1.32
-%define release 1mdk
+%define version 1.33
+%define release %mkrel 1
 
 Name:		perl-%{module}
 Version:	%{version}

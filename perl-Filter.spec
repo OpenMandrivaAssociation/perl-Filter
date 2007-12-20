@@ -11,6 +11,7 @@ Group:		Development/Perl
 Source:		http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{module}-%{version}.tar.bz2
 Patch:		%{name}-1.31.shellbang.patch
 Url:		http://search.cpan.org/dist/%{module}/
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildRequires:	perl-devel
 
 %description

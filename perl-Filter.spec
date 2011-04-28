@@ -1,9 +1,9 @@
 %define upstream_name    Filter
-%define upstream_version 1.37
+%define upstream_version 1.38
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:	Source filter modules for Perl
 License:	GPL+ or Artistic

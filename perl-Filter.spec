@@ -1,5 +1,5 @@
 %define upstream_name    Filter
-%define upstream_version 1.38
+%define upstream_version 1.39
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,11 +9,11 @@ Summary:	Source filter modules for Perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:		%{name}-1.31.shellbang.patch
 
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 
 %description
 Source filter modules for Perl
@@ -33,7 +33,7 @@ find examples -type f | xargs perl -pi -e 's|^#!/usr/local/bin/perl|#!/usr/bin/p
 make test
 
 %install
-rm -rf %{buildroot}
+
 %makeinstall_std
 rm -rf %{buildroot}%{perl_vendorarch}/Filter/Util/Call.pm
 rm -rf %{buildroot}%{perl_vendorarch}/auto/Filter/Util/Call
